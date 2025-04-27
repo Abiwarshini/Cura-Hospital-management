@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+}
+
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100vh;
+}
+
+.profile {
+    text-align: center;
+    
+}
+
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    background: #f8f9fa;
+    text-align: center;
+    border-radius: 8px;
+}
+.profile h3{
+    font-family: ubuntu;
+}
+input {
+    background-color: #e4e6ea; 
+    border: 2px solid hsl(244, 73%, 23%); 
+    border-radius: 8px; 
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #000000; 
+    width: 200px; 
+    transition: all 0.3s ease;
+}
+
+
+input:focus {
+    background-color: #fff; 
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.footer {
+    background-color: #9bebfd;
+    color: #333;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 700;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li.active {
+    background: #00eaff;
+    color: #ffffff;
+}
+
+.dashboard {
+    margin-left: 300px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+.dashboard h1{
+    font-family: kanit;
+    color:#007bff;
+    padding-right: 20px;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    font-family: ubuntu;
+    font-weight: 700;
+    height: 150px;
+    padding-top: 40px;
+    text-align:center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card span{
+    color:blue;
+    font-size: 25px;
+}
+
+.charts {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chart-appointment-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.charts h2{
+    font-family: ubuntu;
+    font-size: 32px;
+    color: #007bff;
+}
+.charts-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; 
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+.chart-container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.info-cards {
+    display: flex;
+  
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.patient-details h2 {
+    font-family: ubuntu;
+  color:#007bff;
+}
+.appointment-list h2{
+    font-family: ubuntu;
+    color:#007bff; 
+    padding-left: 30px;
+}
+.appointment-list {
+    flex: 1;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    height: 420px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+} 
+.appointment-list p{
+    padding-left: 30px;
+} 
+.activities-patient-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.recent-activities, .patient-details  {
+    flex: 1;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.imgsec {
+    flex: 1;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+    height: 415px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.patient-details{
+    font-size: 20px;
+}
+.patient-details p{
+    padding-left: 30px;
+}
+.patient-details h2{
+    padding-left: 30px;
+}
+.recent-activities h2 {
+ font-family: ubuntu;
+ font-size: 32px;
+    margin-bottom: 15px;
+    color:#007bff;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.activity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.activity p {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+.activity-time {
+    font-size: 12px;
+    color: #888;
+}

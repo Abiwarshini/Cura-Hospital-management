@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediReach - Bridging Healthcare with Innovation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: white;
+      color: #0c1c2c;
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+    .navbar-brand img {
+      height: 90px;
+    }
+
+    .nav-link {
+      color: #5fc9c5;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: black;
+    }
+
+    .btn-signup {
+      background-color: #5fc9c5;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 8px 20px;
+    }
+
+    .btn-signup:hover {
+      background: white;
+      color: #0c1c2c;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      font-size: 40px;
+      font-weight: bold;
+      color: #5fc9c5;
+    }
+
+    .hero-subtext {
+      font-size: 1.1rem;
+      margin-top: 15px;
+      color: #0c1c2c;
+      max-width: 500px;
+    }
+
+    .service-section {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .footer {
+      background: #0c1c2c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .container-desc {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #dff5f4;
+      padding: 50px;
+    }
+
+    .content-section {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .imgsec {
+      width: 50%;
+      height: 300px;
+      background: url('home2.png') no-repeat center center/cover;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+      }
+      .content-section, .imgsec {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="cura1.png" alt="MediReach Logo"></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html">Billing</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="btn btn-signup" href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section container">
+    <div>
+      <h1 class="hero-text">Bringing Healthcare Closer to You</h1>
+      <p class="hero-subtext">
+        Welcome to MediReach — where expert care meets modern convenience. 
+        Our platform connects you with top-rated doctors, diagnostics, and healthcare services effortlessly, ensuring that quality healthcare is always within your reach.
+      </p>
+      <a href="appointment.html" class="btn btn-signup">Book an Appointment</a>
+    </div>
+    <div>
+      <img src="doc.jpg" alt="Hospital Image" style="border-radius: 40px;" width="300">
+    </div>
+  </section>
+
+  <section class="service-section" id="services">
+    <h2>Our Services</h2>
+    <p>Delivering excellence in healthcare, every step of the way.</p>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>MRI Scan</h3>
+        <p>State-of-the-art imaging services for precise and early diagnosis.</p>
+        <a href="book" class="btn btn-signup">Book Now</a>
+      </div>
+      <div class="service-card">
+        <h3>Ultrasound</h3>
+        <p>Accurate, real-time imaging conducted by expert technicians.</p>
+        <a href="#book" class="btn btn-signup">Book Now</a>
+      </div>
+      <div class="service-card">
+        <h3>Full Body Checkup</h3>
+        <p>Comprehensive health assessments tailored to your needs.</p>
+        <a href="#book" class="btn btn-signup">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-desc" id="about">
+    <div class="content-section">
+      <h2>About Cura Health Clinic</h2>
+      <p>
+        At Cura Health Clinic, we believe that true wellness begins with an integrative approach to medicine. 
+        Our expert team of family physicians focuses on holistic health solutions — going beyond treating symptoms to target the root cause of health issues. 
+        Our commitment to personalized care empowers patients to lead healthier, fuller lives.
+      </p>
+      <p>
+        Through compassionate guidance, advanced diagnostics, and innovative treatments, we are dedicated to enhancing the well-being of every individual we serve.
+      </p>
+    </div>
+    <div class="imgsec"></div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 MediReach. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@medireach.com" style="color: #5fc9c5;">info@medireach.com</a> | Phone: +123 456 7890</p>
+  </footer>
+
+</body>
+</html>

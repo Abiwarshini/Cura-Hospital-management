@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Hospital Management System</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .image-section {
+            width: 50%;
+            background: url('login.png') no-repeat center center/cover;
+        }
+        .login-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+        }
+        .login-box form {
+            width: 100%;
+            max-width: 300px;
+        }
+        .login-box input,
+        .login-box select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5fc9c5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .kin {
+            padding-top: 5px;
+            text-decoration: none;
+            color: #5fc9c5;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="image-section"></div>
+    <div class="login-section">
+        <div class="login-box">
+            <form onsubmit="validateForm(event)">
+                <h2>Sign up form</h2>
+                <input type="text" placeholder="Enter your name" id="name">
+                <input type="text" placeholder="Enter your age" id="age">
+                <input type="email" placeholder="Enter your email" id="email">
+                <input type="number" placeholder="Enter your number" id="number">
+                <input type="password" placeholder="Enter your password" id="password">
+                <select id="role">
+                    <option value="">Select Role</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                </select>
+                <button type="submit">Signup</button>
+            </form>
+            <h6>Already signup? Please <a href="login.html" class="kin">login</a></h6>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function validateForm(event) {
+        event.preventDefault(); // Prevent page reload
+
+        let name = document.getElementById("name").value.trim();
+        let age = document.getElementById("age").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let number = document.getElementById("number").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let role = document.getElementById("role").value;
+
+        if (name === "") return alert("Name is required");
+        if (age === "" || isNaN(age) || age < 18 || age > 100) return alert("Enter a valid age between 18 and 100");
+        if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) return alert("Enter a valid email");
+        if (!/^[0-9]{10}$/.test(number)) return alert("Enter a valid 10-digit number");
+        if (password.length < 6) return alert("Password must be at least 6 characters long");
+        if (role === "") return alert("Please select a role");
+
+        const userData = {
+            name,
+            age,
+            email,
+            number,
+            password,
+            role
+        };
+
+        try {
+            const response = await fetch("http://localhost:5000/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(userData)
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(`Signup successful! Your ID: ${result.userId}`);
+                window.location.href = "login.html";
+            } else {
+                alert(result.error || "Signup failed");
+            }
+        } catch (err) {
+            console.error("Error:", err);
+            alert("Could not connect to server.");
+        }
+    }
+</script>
+</body>
+</html>
